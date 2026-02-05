@@ -8,8 +8,9 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
           <div className="text-lg font-semibold tracking-tight">
-            Care Cards <span className="text-slate-500">Collective</span>
+               Care Cards
           </div>
+
           <nav className="hidden md:flex gap-6 text-sm text-slate-600">
             <a href="#how" className="hover:text-slate-900">How it works</a>
             <a href="#human" className="hover:text-slate-900">Human Touch</a>
