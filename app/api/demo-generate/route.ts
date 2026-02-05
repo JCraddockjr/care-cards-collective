@@ -114,7 +114,8 @@ const signOff = `\n— ${signatureText}${sender ? `\n${sender}` : ""}`;
     "",
     occasionLine[p.occasion],
     "",
-    intent.endsWith(".") ? intent : intent + ".",
+    intent.length <= 24 ? `I just want to share ${intent.replace(/\.$/, "").toLowerCase()}.` : (intent.endsWith(".") ? intent : intent + "."),
+
     meaningStanza.trimEnd(),
     "If the day feels heavy, I’ll hold hope for you—",
     "if it feels bright, I’ll celebrate right beside you.",
