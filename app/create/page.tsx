@@ -301,16 +301,18 @@ export default function CreatePage() {
                   onClick={() => {
                     if (!poem) return;
                     navigator.clipboard.writeText(poem);
+
                     alert("Copied poem to clipboard (demo).");
                   }}
                 >
-                  Copy Text
+                  Share Card
                 </button>
               </div>
 
               <p className="mt-3 text-xs text-slate-500">
-                Next: we’ll replace “Copy Text” with “Share link / Email delivery”.
-              </p>
+                 Link sharing and email delivery are coming soon.
+            </p>
+
             </div>
           </div>
         </section>
