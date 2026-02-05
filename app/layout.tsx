@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Care Cards Collective",
+  title: "Care Cards",
   description: "Thoughtful cards created with care, creativity, and human touch.",
 };
 
