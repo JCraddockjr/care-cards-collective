@@ -34,6 +34,13 @@ export default function Home() {
             Create a meaningful poem card in minutes — with Human Touch refinement
             when the moment matters most.
           </p>
+          <a
+            href="/create"
+            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700"
+>
+            Create a Card
+          </a>
+
           <div className="mt-8 flex gap-4">
             <a
               href="#early"
