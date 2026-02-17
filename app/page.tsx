@@ -1,85 +1,70 @@
 // app/page.tsx
+"use client";
 
-'use client';
+import DemoBadge from "@/components/DemoBadge";
+import React from "react";
+import EarlyAccessForm from "@/components/EarlyAccessForm";
+
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-          <div className="text-lg font-semibold tracking-tight">
-               Care Cards
-          </div>
-
-          <nav className="hidden md:flex gap-6 text-sm text-slate-600">
-            <a href="#how" className="hover:text-slate-900">How it works</a>
-            <a href="#human" className="hover:text-slate-900">Human Touch</a>
-            <a href="#early" className="hover:text-slate-900">Early access</a>
-          </nav>
-          <a
-            href="#early"
-            className="rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700 transition"
-          >
-            Join early list
-          </a>
-        </div>
-      </header>
+    <div className="space-y-6">
 
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 py-20 grid md:grid-cols-2 gap-14 items-center">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
-            Thoughtful cards, crafted with care.
-          </h1>
-          <p className="mt-5 text-lg text-slate-600 leading-relaxed">
-            Create a meaningful poem card in minutes — with Human Touch refinement
-            when the moment matters most.
-          </p>
-          <a
-            href="/create"
-            className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white hover:bg-blue-700"
->
-            Create a Card
-          </a>
+<section className="mx-auto max-w-6xl px-6 py-16 md:py-20 grid md:grid-cols-2 gap-12 lg:gap-14 items-center">
+  <div className="space-y-6">
+    <DemoBadge />
 
-          <div className="mt-8 flex gap-4">
-            <a
-              href="#early"
-              className="rounded-full bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 transition"
-            >
-              Get early access
-            </a>
-            <a
-              href="#how"
-              className="rounded-full border border-slate-300 px-6 py-3 font-medium hover:bg-slate-50 transition"
-            >
-              See how it works
-            </a>
-          </div>
-        </div>
+    <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
+      Thoughtful cards, crafted with care.
+    </h1>
 
-        {/* Card preview */}
-        <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-          <div className="h-48 rounded-xl bg-gradient-to-b from-blue-100 to-white flex items-center justify-center text-slate-500">
-            Card cover preview
-          </div>
-          <div className="mt-5 space-y-3">
-            <div className="h-3 bg-slate-300 rounded w-3/4" />
-            <div className="h-3 bg-slate-300 rounded w-2/3" />
-            <div className="h-3 bg-slate-300 rounded w-1/2" />
-          </div>
-          <div className="mt-5 text-sm text-blue-700 font-medium">
-            Print-ready PDF
-          </div>
-        </div>
-      </section>
+    <p className="text-lg text-slate-600 leading-relaxed">
+      Create a meaningful poem card in minutes — with Human Touch refinement
+      when the moment matters most.
+    </p>
+
+    <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+      <a
+        href="#early"
+        className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 transition"
+      >
+        Get early access
+      </a>
+
+      <a
+        href="#how"
+        className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 font-medium text-slate-800 hover:bg-slate-50 transition"
+      >
+        See how it works
+      </a>
+    </div>
+  </div>
+
+  {/* Card preview */}
+  <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+    <div className="h-48 rounded-xl bg-gradient-to-b from-blue-100 to-white flex items-center justify-center text-slate-500">
+      Card cover preview
+    </div>
+
+    <div className="mt-5 space-y-3">
+      <div className="h-3 bg-slate-300 rounded w-3/4" />
+      <div className="h-3 bg-slate-300 rounded w-2/3" />
+      <div className="h-3 bg-slate-300 rounded w-1/2" />
+    </div>
+
+    <div className="mt-5 text-sm text-blue-700 font-medium">
+      Print-ready PDF
+    </div>
+  </div>
+</section>
+
 
       {/* How it works */}
       <section id="how" className="border-t border-slate-200 py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            How it works
-          </h2>
+          <h2 className="text-3xl font-semibold tracking-tight">How it works</h2>
+
           <div className="mt-10 grid md:grid-cols-3 gap-8">
             <Step
               number="01"
@@ -103,17 +88,18 @@ export default function Home() {
       {/* Human Touch */}
       <section id="human" className="border-t border-slate-200 py-20 bg-slate-50">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Human Touch
-          </h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Human Touch</h2>
+
           <p className="mt-5 text-lg text-slate-600">
-            When words truly matter, a Care Cards poet personally refines your poem
-            for tone, clarity, and emotional resonance.
+            When words truly matter, a Care Cards poet personally refines your
+            poem for tone, clarity, and emotional resonance.
           </p>
+
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <Badge>Human Touch · $35</Badge>
             <Badge>Priority (same-day) · +$20</Badge>
           </div>
+
           <p className="mt-4 text-sm text-slate-500">
             Priority is an add-on to Human Touch.
           </p>
@@ -123,66 +109,16 @@ export default function Home() {
       {/* Early access */}
       <section id="early" className="border-t border-slate-200 py-20">
         <div className="mx-auto max-w-md px-6 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Early access
-          </h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Early access</h2>
+
           <p className="mt-4 text-slate-600">
             Be the first to know when Care Cards Collective opens.
           </p>
-          <form
-            className="mt-8 flex flex-col gap-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thanks! Early access list coming soon.");
-            }}
-          >
-            <input
-              type="email"
-              required
-              placeholder="you@example.com"
-              className="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-4 focus:ring-blue-100"
-            />
-            <button
-              type="submit"
-              className="rounded-xl bg-blue-600 px-4 py-3 font-medium text-white hover:bg-blue-700 transition"
-            >
-              Notify me
-            </button>
-          </form>
+
+          <EarlyAccessForm />
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="border-t border-slate-200 py-8">
-        <div className="mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-500">
-  <div>
-    © {new Date().getFullYear()} Care Cards Collective
-  </div>
-
-  <div className="flex gap-4">
-    <a href="/privacy" className="text-blue-700 hover:underline">
-      Privacy
-    </a>
-    <a href="/terms" className="text-blue-700 hover:underline">
-      Terms
-    </a>
-    <a href="/care-balance" className="text-blue-700 hover:underline">
-      Care Balance
-    </a>
-  </div>
-
-  <div>
-    Contact:{" "}
-    <a
-      href="mailto:hello@carecardscollective.com"
-      className="text-blue-700 hover:underline"
-    >
-      hello@carecardscollective.com
-    </a>
-  </div>
-</div>
-      </footer>
-    </main>
+    </div>
   );
 }
 
